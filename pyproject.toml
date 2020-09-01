@@ -1,0 +1,5 @@
+[tool.pytest.ini_options]
+python_files = "tests.py"
+[tool.black]
+line-length = 100
+target-version = ['py36', 'py37', 'py38']
