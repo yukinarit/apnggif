@@ -31,7 +31,7 @@ setup(
         "console_scripts": ["apnggif=apnggif:main"],
     },
     python_requires=">=3.6",
-    lizense="zlib/libpng",
+    license="zlib/libpng",
     classifiers=[
         "Development Status :: 4 - Beta",
         "Environment :: Console",

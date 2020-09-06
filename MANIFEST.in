@@ -1,0 +1,3 @@
+include apng2gif.h
+include libpng/*.h
+include zlib/*.h
