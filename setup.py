@@ -17,7 +17,7 @@ ext = Extension(
 
 setup(
     name="apnggif",
-    version="0.1.0",
+    version="0.1.1",
     description="Python interface to apng2gif",
     long_description=readme,
     long_description_content_type="text/markdown",
