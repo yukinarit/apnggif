@@ -1,7 +1,7 @@
 import apnggif_sys
-import click
 import logging
 import coloredlogs
+import oppapi
 from typing import Union, Tuple, Optional, List
 from pathlib import Path
 
@@ -80,20 +80,37 @@ def read_output(inp: Output, png: Optional[List[Union[str, Path]]] = None) -> Li
     return [str(p.resolve()) if isinstance(p, Path) else p for p in gifs]
 
 
-@click.command()
-@click.argument("png", nargs=-1)
-@click.option("-t", "--tlevel", type=int, help="Transparency level, defaults to 128")
-@click.option("-b", "--bg", type=str, help="Background color")
-@click.option("-v", "--verbose", is_flag=True, help="Enable verbose logging")
-def main(png, tlevel, bg, verbose):
+@oppapi.oppapi
+class Opt:
     """
     apnggif - Convert APNG to GIF.
     """
+
+    png: List[Path]
+    """ List of PNGs """
+
+    tlevel: Optional[int]
+    """ Transparency level, defaults to 128 """
+
+    bg: Optional[str]
+    """ Background color """
+
+    verbose: Optional[bool]
+    """ Enable verbose logging """
+
+
+def main():
+    """
+    apnggif - Convert APNG to GIF.
+    """
+    opt = oppapi.from_args(Opt)
     coloredlogs.install(
-        level="DEBUG" if verbose else "INFO", logger=log, fmt="%(levelname)s %(message)s"
+        level="DEBUG" if opt.verbose else "INFO", logger=log, fmt="%(levelname)s %(message)s"
     )
+    log.debug(opt)
+
     try:
-        apnggif(png, tlevel=tlevel, bg=bg)
+        apnggif(opt.png, tlevel=opt.tlevel, bg=opt.bg)
     except Exception as e:
         log.error(e)
 

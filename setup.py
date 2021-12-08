@@ -27,7 +27,7 @@ setup(
     url="https://github.com/yukinarit/apnggif",
     py_modules=["apnggif", "apnggif_sys"],
     ext_modules=[ext],
-    install_requires=["click", "coloredlogs"],
+    install_requires=["oppapi", "coloredlogs"],
     entry_points={
         "console_scripts": ["apnggif=apnggif:main"],
     },

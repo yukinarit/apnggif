@@ -1,6 +1,6 @@
 name: Tests
 
-on: [ pull_request]
+on: [pull_request]
 
 jobs:
   test:
@@ -19,7 +19,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        pip install wheel click coloredlogs
+        pip install wheel oppapi coloredlogs
         pip list
     - name: Run tests
       run: |
