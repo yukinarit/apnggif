@@ -13,6 +13,7 @@ ext = Extension(
     sources=["apng2gif.cpp", "py.cpp"] + zlib + libpng,
     include_dirs=["libpng", "zlib"],
     language="c++",
+    extra_compile_args=["-DPNG_ARM_NEON_OPT=0"],
 )
 
 setup(
