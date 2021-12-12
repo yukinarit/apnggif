@@ -6,7 +6,7 @@ Both APNG (Animated PNG) are GIF are major animation formats nowadays, however t
 
 ## Usage
 
-`apnggif` requires python>=3.6.
+`apnggif` requires python>=3.7.
 
 ```
 pip install apnggif

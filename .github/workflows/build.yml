@@ -1,6 +1,6 @@
 name: Tests
 
-on: [ pull_request]
+on: [pull_request]
 
 jobs:
   test:
@@ -8,7 +8,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        python-version: ["3.6", "3.7", "3.8", "3.9", "3.10"]
+        python-version: ["3.7", "3.8", "3.9", "3.10"]
         os: [ubuntu-20.04, macos-10.15, windows-2019]
     steps:
     - name: Checkout
@@ -19,7 +19,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        pip install wheel click coloredlogs
+        pip install wheel oppapi coloredlogs
         pip list
     - name: Run tests
       run: |
