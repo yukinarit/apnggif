@@ -31,14 +31,13 @@ setup(
     entry_points={
         "console_scripts": ["apnggif=apnggif:main"],
     },
-    python_requires=">=3.6",
+    python_requires=">=3.7",
     license="zlib/libpng",
     classifiers=[
         "Development Status :: 4 - Beta",
         "Environment :: Console",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: zlib/libpng License",
-        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
