@@ -33,6 +33,10 @@ from apnggif import apnggif
 apnggif("ball.png")
 ```
 
+## MacOS Prerequisites 
+
+Before you install apnggif on MacOS you need to make sure that you've installed XCode from the app store. The command line tools on their own lack the needed SDKs, if your build fails because <Vector> wasn't found you've most likely forgotten this step
+
 ## License
 
 [zlib/libpng License](https://opensource.org/licenses/Zlib).
