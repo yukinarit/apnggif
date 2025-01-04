@@ -33,6 +33,10 @@ from apnggif import apnggif
 apnggif("ball.png")
 ```
 
+## MacOS Prerequisites 
+
+Before you install apnggif on MacOS you need to make sure that you've installed XCode from the app store, otherwise your build will fail.
+
 ## License
 
 [zlib/libpng License](https://opensource.org/licenses/Zlib).
